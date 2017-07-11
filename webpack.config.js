@@ -4,8 +4,8 @@
  var BATH_PATH = './public/assets/';
 
  const extractSass = new ExtractTextPlugin({
-    filename: "./css/app.css"
-    //disable: process.env.NODE_ENV === "development"
+     filename: "./css/app.css"
+     //disable: process.env.NODE_ENV === "development"
  });
 
  module.exports = {
@@ -16,30 +16,33 @@
          filename: './js/app.js'
      },
      module: {
-         loaders: [
-             {
+         loaders: [{
                  test: /\.js$/,
                  loader: 'babel-loader',
                  query: {
                      presets: ['es2015']
                  }
+             },
+             {
+                 test: /\.scss$/,
+                 use: ExtractTextPlugin.extract({
+                     use: [{
+                         loader: "css-loader"
+                     }, {
+                         loader: "sass-loader"
+                     }],
+                     // use style-loader in development
+                     fallback: "style-loader"
+                 })
+             },
+             {
+                 test: /\.(gif|png|jpg|svg)$/,
+                 loader: 'file-loader?name=../build/image/[name].[ext]'
              }
-         ],
-         rules: [{
-            test: /\.scss$/,
-            use: ExtractTextPlugin.extract({
-                use: [{
-                    loader: "css-loader"
-                }, {
-                    loader: "sass-loader"
-                }],
-                // use style-loader in development
-                fallback: "style-loader"
-            })
-        }]
+         ]
      },
      plugins: [
-        extractSass
+         extractSass
      ],
      stats: {
          colors: true

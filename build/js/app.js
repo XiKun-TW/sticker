@@ -67,15 +67,23 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+
 __webpack_require__(1);
 __webpack_require__(2);
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-let a = f=>f;
-let b = 10;
+"use strict";
+
+
+var a = function a(f) {
+  return f;
+};
+var b = 10;
 
 /***/ }),
 /* 2 */
