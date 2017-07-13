@@ -1,0 +1,116 @@
+$header-bg-color: #FFF;
+$sticker-default-color: #FFF;
+$header-color: #E95420;
+$header-create-border-color: #A4A4A4;
+$main-font: 'Patrick Hand', cursive;
+$sticker-font: 'Titillium Web', sans-serif;
+$box-shadow: 5px 5px 7px rgba(0, 0, 0,.2);
+
+@mixin header-box-shadow {
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+@mixin layout-padding {
+    padding: 8px 60px;
+}
+
+@mixin background-color {
+    background: radial-gradient(circle, #FFF, #DDD);
+}
+
+body {
+    @include header-box-shadow();
+    @include background-color();
+}
+
+main {
+    @include layout-padding();
+}
+
+footer,
+header {
+    @include header-box-shadow;
+    @include layout-padding();
+
+    font-family: $main-font;
+    background-color: $header-bg-color;
+    font-size: 48px;
+    color: $header-color;
+}
+
+footer {
+    text-align: center;
+    font-size: 32px;
+}
+
+.sticker {
+    font-family: $sticker-font;
+    background-color: $sticker-default-color;
+    box-shadow: $box-shadow;
+    transform: rotate(-6deg);
+    .sticker-text {
+        font-size: 1.25rem;
+    }
+
+    .toolbar {
+        border-top: 1px solid #EEE;
+    }
+
+    .toolbar-icon {
+        height: 16px;
+        width: 16px;
+        padding-top: 1rem;
+        margin-left: 0.5rem;
+        opacity: 0.6;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.sticker-create {
+    border: 2px dashed $header-create-border-color;
+    background-image: url(/image/add-new.svg);
+    background-repeat: no-repeat;
+    background-position: center 14px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.sticker-create:hover {
+    opacity: 0.6;
+}
+
+.sticker:nth-child(even){
+  transform:rotate(4deg);
+  position:relative;
+  top:5px;
+}
+
+.sticker:nth-child(3n){
+  transform:rotate(-3deg);
+  position:relative;
+  top:-5px;
+}
+
+.sticker:nth-child(5n){
+  transform:rotate(5deg);
+  position:relative;
+  top:-10px;
+}
+
+.sticker:hover,
+.sticker a:focus{
+  box-shadow: $box-shadow;
+  transform: none;
+  position:relative;
+  z-index:5;
+}
+
+// .tag-container {
+//     .tag-list {
+//         box-shadow: $box-shadow;
+//         background-color: $header-bg-color
+//     }
+// }

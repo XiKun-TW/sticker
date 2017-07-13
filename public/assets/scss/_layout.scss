@@ -1,1 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh);
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+}
+
+.sticker-container {
+    display: flex;
+    //flex-basis: 70%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+// .tag-container {
+//     display: flex;
+//     flex-basis: 30%;
+//     justify-content: center;
+
+//     .tag-list {
+//         margin-top: 2rem;
+//         min-height: 200px;
+//         width: 80%;
+//     }
+// }
+
+.sticker-create,
+.sticker {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:10em;
+    width:10em;
+    padding:1em;
+    padding-bottom: 0.5rem;
+    margin-top: 2.5rem;
+    margin-right: 1.25rem;
+    transition:transform .15s linear;
+
+    content {
+        flex-grow: 1;
+    }
+
+    .toolbar {
+        display: flex;
+        justify-content: flex-end;
+
+        .toolbar-icon {
+            cursor: pointer;
+        }
+    }
+}
+
+.sticker-create {
+    height: 9em;
+    width: 9em;
+}
