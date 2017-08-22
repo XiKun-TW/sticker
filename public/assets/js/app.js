@@ -37,7 +37,7 @@ window.onload = () => {
         onStickerRemoved,
         stickerSelector: 'js-sticker', 
         stickerCreatorSelector: 'js-add-sticker',
-        editTextSelector: 'js-edit-text',
+        stickerEditTextSelector: 'js-edit-text',
         stickerRemoveSelector: 'js-remove-sticker'
     });
 

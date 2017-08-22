@@ -71,7 +71,7 @@
 
 
 __webpack_require__(1);
-__webpack_require__(3);
+__webpack_require__(4);
 
 /***/ }),
 /* 1 */
@@ -84,7 +84,7 @@ var _localStorage = __webpack_require__(2);
 
 var _localStorage2 = _interopRequireDefault(_localStorage);
 
-var _stickerManager = __webpack_require__(8);
+var _stickerManager = __webpack_require__(3);
 
 var _stickerManager2 = _interopRequireDefault(_stickerManager);
 
@@ -126,7 +126,7 @@ window.onload = function () {
         onStickerRemoved: onStickerRemoved,
         stickerSelector: 'js-sticker',
         stickerCreatorSelector: 'js-add-sticker',
-        editTextSelector: 'js-edit-text',
+        stickerEditTextSelector: 'js-edit-text',
         stickerRemoveSelector: 'js-remove-sticker'
     });
 
@@ -190,16 +190,6 @@ exports.default = LocalStorage;
 
 /***/ }),
 /* 3 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -337,6 +327,12 @@ var StickerManager = function () {
 }();
 
 exports.default = StickerManager;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

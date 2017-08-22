@@ -5,10 +5,10 @@
   background-position: center; }
 
 .icon-remove {
-  background-image: url(/image/remove.svg); }
+  background-image: url("/../../image/remove.svg"); }
 
 .icon-edit {
-  background-image: url(/image/edit.svg); }
+  background-image: url("/../../image/edit.svg"); }
 
 body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -50,7 +50,7 @@ footer {
 
 .sticker-create {
   border: 2px dashed #A4A4A4;
-  background-image: url(/image/add-new.svg);
+  background-image: url("/../../image/add-new.svg");
   background-repeat: no-repeat;
   background-position: center 14px;
   opacity: 0.3;
