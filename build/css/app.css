@@ -8,7 +8,7 @@
   background-image: url(../../Image/remove.svg); }
 
 .icon-edit {
-  background-image: url("/../../../Image/edit.svg"); }
+  background-image: url(../../Image/edit.svg); }
 
 body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
