@@ -36,8 +36,11 @@
                  })
              },
              {
-                 test: /\.(gif|png|jpg|svg)$/,
-                 loader: 'file-loader?name=../build/image/[name].[ext]'
+                test:/\.(png|svg|jpeg|ttf)$/,
+                loader  : 'file-loader',
+                options : {
+                    name: '../../Image/[name].[ext]'
+                }
              }
          ]
      },
