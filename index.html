@@ -33,10 +33,14 @@
             r.onload = function() {
                 hj('trigger', 'first');
                 hj('trigger', 'page-load');
-                document.getElementsByClassName('js-add-sticker')[0].onclick = function () { 
-                    hj('trigger', 'second');
-                    hj('trigger', 'button-click');
+                function bind() {
+                    document.getElementsByClassName('js-add-sticker')[0].onclick = function () { 
+                        hj('trigger', 'second');
+                        hj('trigger', 'button-click');
+                    }
                 }
+                
+                window.onload = bind;
             }
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
