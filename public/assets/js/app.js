@@ -26,6 +26,8 @@ const onStickerAdded = () => {
     currentData = currentstickerManager.addSticker(rootElement, currentData);
     currentStroage.setCurrentStroage(currentData);
     currentstickerManager.loadAllSticker(rootElement, currentData);
+    hj('trigger', 'second');
+    hj('trigger', 'button-click');
 };
 
 window.onload = () => {
@@ -43,9 +45,4 @@ window.onload = () => {
 
     let currentStroageData = currentStroage.getCurrentStroage();
     currentstickerManager.loadAllSticker(rootElement, currentStroageData);
-
-    document.getElementsByClassName('js-add-sticker')[0].onclick = function () { 
-        hj('trigger', 'second');
-        hj('trigger', 'button-click');
-    }
 };
