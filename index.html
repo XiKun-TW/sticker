@@ -31,8 +31,10 @@
             r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
             a.appendChild(r);
             r.onload = function() {
-                debugger;
                 hj('trigger', 'first');
+                document.getElementsByClassName('js-add-sticker')[0].onclick = function () { 
+                    hj('trigger', 'second');
+                }
             }
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
