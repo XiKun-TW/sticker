@@ -132,6 +132,11 @@ window.onload = function () {
 
     var currentStroageData = currentStroage.getCurrentStroage();
     currentstickerManager.loadAllSticker(rootElement, currentStroageData);
+
+    document.getElementsByClassName('js-add-sticker')[0].onclick = function () {
+        hj('trigger', 'second');
+        hj('trigger', 'button-click');
+    };
 };
 
 /***/ }),
