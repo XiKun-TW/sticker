@@ -26,8 +26,7 @@ const onStickerAdded = () => {
     currentData = currentstickerManager.addSticker(rootElement, currentData);
     currentStroage.setCurrentStroage(currentData);
     currentstickerManager.loadAllSticker(rootElement, currentData);
-    hj('trigger', 'second');
-    hj('trigger', 'button-click');
+    window.location.hash = 'click';
 };
 
 window.onload = () => {
@@ -42,6 +41,10 @@ window.onload = () => {
         stickerEditTextSelector: 'js-edit-text',
         stickerRemoveSelector: 'js-remove-sticker'
     });
+
+    setTimeout(() => {
+        window.location.hash = 'home';
+    }, 60000);
 
     let currentStroageData = currentStroage.getCurrentStroage();
     currentstickerManager.loadAllSticker(rootElement, currentStroageData);
